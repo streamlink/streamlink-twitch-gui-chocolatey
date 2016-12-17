@@ -17,7 +17,7 @@
     <bugTrackerUrl>https://github.com/streamlink/streamlink-twitch-gui/issues</bugTrackerUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <dependencies>
-      <dependency id="streamlink-twitch-gui" version="(,1.0]"/>
+      <dependency id="streamlink-twitch-gui" version="1.0.0"/>
     </dependencies>
   </metadata>
 </package>
