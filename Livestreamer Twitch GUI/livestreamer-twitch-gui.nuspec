@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>livestreamer-twitch-gui</id>
+    <title>[Deprecated] Livestreamer Twitch GUI</title>
+    <version>1.0.0</version>
+    <authors>Sebastian Meyer</authors>
+    <owners>Scott Walters</owners>
+    <summary>A multi platform Twitch.tv browser for Livestreamer</summary>
+    <description>This package has been deprecated in favor of Streamlink Twitch GUI.</description>
+    <projectUrl>https://github.com/streamlink/streamlink-twitch-gui</projectUrl>
+    <packageSourceUrl>https://github.com/streamlink/streamlink-twitch-gui-chocolatey</packageSourceUrl>
+    <tags>livestreamer twitch gui streaming deprecated</tags>
+    <copyright>Sebastian Meyer</copyright>
+    <licenseUrl>https://github.com/streamlink/streamlink-twitch-gui/blob/master/LICENSE</licenseUrl>
+    <docsUrl>https://github.com/streamlink/streamlink-twitch-gui/wiki</docsUrl>
+    <bugTrackerUrl>https://github.com/streamlink/streamlink-twitch-gui/issues</bugTrackerUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <dependencies>
+      <dependency id="streamlink-twitch-gui" version="1.0.0"/>
+    </dependencies>
+  </metadata>
+</package>
