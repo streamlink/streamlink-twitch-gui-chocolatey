@@ -26,7 +26,7 @@ Example: `choco uninstall streamlink-twitch-gui -y -params '"/Purge"'`
   [Chromium]: https://www.chromium.org/ "Chromium"
     </description>
     <projectUrl>https://github.com/streamlink/streamlink-twitch-gui</projectUrl>
-    <packageSourceUrl>https://github.com/streamlink/streamlink-twitch-gui</packageSourceUrl>
+    <packageSourceUrl>https://github.com/streamlink/streamlink-twitch-gui-chocolatey</packageSourceUrl>
     <tags>streamlink twitch gui livestreamer streaming</tags>
     <copyright>Sebastian Meyer</copyright>
     <licenseUrl>https://github.com/streamlink/streamlink-twitch-gui/blob/master/LICENSE</licenseUrl>
