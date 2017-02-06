@@ -3,7 +3,7 @@
   <metadata>
     <id>streamlink-twitch-gui</id>
     <title>Streamlink Twitch GUI</title>
-    <version>1.0.1</version>
+    <version>1.1.1</version>
     <authors>Sebastian Meyer</authors>
     <owners>Sebastian Meyer, Scott Walters</owners>
     <summary>A multi platform Twitch.tv browser for Streamlink</summary>
@@ -26,7 +26,7 @@ Example: `choco uninstall streamlink-twitch-gui -y -params '"/Purge"'`
   [Chromium]: https://www.chromium.org/ "Chromium"
     </description>
     <projectUrl>https://github.com/streamlink/streamlink-twitch-gui</projectUrl>
-    <packageSourceUrl>https://github.com/streamlink/streamlink-twitch-gui</packageSourceUrl>
+    <packageSourceUrl>https://github.com/streamlink/streamlink-twitch-gui-chocolatey</packageSourceUrl>
     <tags>streamlink twitch gui livestreamer streaming</tags>
     <copyright>Sebastian Meyer</copyright>
     <licenseUrl>https://github.com/streamlink/streamlink-twitch-gui/blob/master/LICENSE</licenseUrl>
@@ -35,18 +35,10 @@ Example: `choco uninstall streamlink-twitch-gui -y -params '"/Purge"'`
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/streamlink/streamlink-twitch-gui/master/src/img/icon-256.png</iconUrl>
     <dependencies>
-      <dependency id="streamlink" version="0.1.0"/>
+      <dependency id="streamlink" version="[0.1.0,)"/>
     </dependencies>
-    <releaseNotes>- Fixed file permissions on MacOS and Linux. #210 #349
-- Fixed maximize button only working once. #350
-- Fixed VLC player preset on MacOS. #354 #355
-- Fixed subscriptions page not working correctly. #356
-- Fixed graphics glitches on Windows. #357
-- Fixed drag &amp; drop not being disabled. #359
-- Fixed bug when notifications were disabled in Windows 10. #366
-- Disabled chromium&apos;s internal smooth scrolling. #365
+    <releaseNotes>- Fixed Livestreamer standalone validation. #386
 
-
-[Changelog](https://github.com/streamlink/streamlink-twitch-gui/compare/v1.0.0...v1.0.1)</releaseNotes>
+[Changelog](https://github.com/streamlink/streamlink-twitch-gui/compare/v1.1.0...v1.1.1)</releaseNotes>
   </metadata>
 </package>

@@ -2,17 +2,10 @@ $packageName = 'streamlink-twitch-gui'
 $packageParameters = $env:chocolateyPackageParameters
 
 $desktop = [Environment]::GetFolderPath("Desktop")
-$shortcutFile = Join-Path $desktop "$($packageName).lnk"
+$shortcutFile = Join-Path $desktop "$packageName.lnk"
 if (Test-Path $shortcutFile){
     Remove-Item $shortcutFile
 }
-
-$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$installDir = "$(Split-Path -parent $toolsDir)"
-if (Test-Path $installDir){
-    Remove-Item -Recurse $installDir
-}
-
 
 if ($packageParameters) {
     $match_pattern = "\/[Pp]urge"
