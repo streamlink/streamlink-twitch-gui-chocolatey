@@ -3,7 +3,7 @@
   <metadata>
     <id>streamlink-twitch-gui</id>
     <title>Streamlink Twitch GUI</title>
-    <version>1.2.0</version>
+    <version>1.2.1</version>
     <authors>Sebastian Meyer</authors>
     <owners>Sebastian Meyer, Scott Walters</owners>
     <summary>A multi platform Twitch.tv browser for Streamlink</summary>
@@ -39,6 +39,6 @@ Example: `choco uninstall streamlink-twitch-gui -y -params '"/Purge"'`
     </dependencies>
     <releaseNotes>- Fixed Livestreamer standalone validation. #386
 
-[Changelog](https://github.com/streamlink/streamlink-twitch-gui/compare/v1.1.0...v1.1.1)</releaseNotes>
+[Changelog](https://github.com/streamlink/streamlink-twitch-gui/compare/v1.2.0...v1.2.1)</releaseNotes>
   </metadata>
 </package>
