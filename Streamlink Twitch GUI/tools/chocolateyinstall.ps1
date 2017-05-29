@@ -1,5 +1,5 @@
 $packageName = 'streamlink-twitch-gui'
-$packageVersion = 'v1.3.0'
+$packageVersion = 'v1.3.1'
 $toolsDir = Split-Path -parent $MyInvocation.MyCommand.Definition
 $installDir = Split-Path -parent $toolsDir
 $downloadPath = "https://github.com/streamlink/streamlink-twitch-gui/releases/download/$packageVersion/"
@@ -7,10 +7,10 @@ $downloadPath = "https://github.com/streamlink/streamlink-twitch-gui/releases/do
 Install-ChocolateyZipPackage `
 	-PackageName    $packageName `
 	-Url            "$($downloadPath)streamlink-twitch-gui-$packageVersion-win32.zip" `
-	-Checksum       "6d52e6d365b1b8b2efc931cc520f6b8880f4339a6074e7db189a92952f3cdf03" `
+	-Checksum       "678d09492a2ab8bbc7ad0e4137c287302ea7f93022364007a57a38a3c910f12a" `
 	-ChecksumType   "sha256" `
 	-Url64bit       "$($downloadPath)streamlink-twitch-gui-$packageVersion-win64.zip" `
-	-Checksum64     "aedd0ba02b770f28b44a873531fe1c49e2c37adc98ab3c47b11486acae65a12f" `
+	-Checksum64     "c1768677ebc75645b4e565e2d35a70e30769a3e714c3a993198444ecfb69917a" `
 	-ChecksumType64 "sha256" `
 	-UnzipLocation  $installDir
 
