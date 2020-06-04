@@ -33,7 +33,7 @@ Example: `choco uninstall streamlink-twitch-gui -y -params '"/Purge"'`
     <docsUrl>https://github.com/streamlink/streamlink-twitch-gui/wiki</docsUrl>
     <bugTrackerUrl>https://github.com/streamlink/streamlink-twitch-gui/issues</bugTrackerUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/streamlink/streamlink-twitch-gui/master/src/img/icon-256.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/streamlink/streamlink-twitch-gui/master/src/app/assets/icons/icon-256.png</iconUrl>
     <dependencies>
       <dependency id="streamlink" version="[1.4.0,)"/>
     </dependencies>
