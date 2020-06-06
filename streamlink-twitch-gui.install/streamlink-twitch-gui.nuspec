@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>streamlink-twitch-gui</id>
+    <id>streamlink-twitch-gui.install</id>
     <title>Streamlink Twitch GUI</title>
     <version>1.10.0</version>
     <authors>Sebastian Meyer</authors>
@@ -47,7 +47,7 @@ Please bear in mind that you’re bypassing any ads run by [Twitch.tv][Twitch.tv
 
 * `/Purge` - (uninstall) delete appdata and cache folders upon install
 
-Example: `choco uninstall streamlink-twitch-gui -y -params '"/Purge"'`
+Example: `choco uninstall streamlink-twitch-gui.install -y -params '"/Purge"'`
 
   [Streamlink]: https://github.com/streamlink/streamlink "Streamlink"
   [Twitch.tv]: https://twitch.tv "Twitch.tv"
