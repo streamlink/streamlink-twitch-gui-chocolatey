@@ -3,9 +3,9 @@
   <metadata>
     <id>streamlink-twitch-gui</id>
     <title>Streamlink Twitch GUI</title>
-    <version>1.10.0</version>
+    <version>1.11.0</version>
     <authors>Sebastian Meyer</authors>
-    <owners>Sebastian Meyer, Scott Walters</owners>
+    <owners>Scott Walters</owners>
     <summary>A multi platform Twitch.tv browser for Streamlink</summary>
     <description># Streamlink Twitch GUI
 
@@ -69,9 +69,9 @@ Example: `choco uninstall streamlink-twitch-gui -y -params '"/Purge"'`
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/streamlink/streamlink-twitch-gui/master/src/app/assets/icons/icon-256.png</iconUrl>
     <dependencies>
-      <dependency id="streamlink" version="[1.4.0,)"/>
+      <dependency id="streamlink" version="[2.0.0,)"/>
     </dependencies>
-    <releaseNotes>[Release notes](https://github.com/streamlink/streamlink-twitch-gui/releases/tag/v1.10.0)
-[Changelog](https://github.com/streamlink/streamlink-twitch-gui/compare/v1.9.1...v1.10.0)</releaseNotes>
+    <releaseNotes>[Release notes](https://github.com/streamlink/streamlink-twitch-gui/releases/tag/v1.11.0)
+[Changelog](https://github.com/streamlink/streamlink-twitch-gui/compare/v1.10.0...v1.11.0)</releaseNotes>
   </metadata>
 </package>
