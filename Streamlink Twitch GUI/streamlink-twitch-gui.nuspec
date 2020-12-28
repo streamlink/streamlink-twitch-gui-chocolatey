@@ -71,7 +71,7 @@ Example: `choco uninstall streamlink-twitch-gui -y -params '"/Purge"'`
     <dependencies>
       <dependency id="streamlink" version="[1.4.0,)"/>
     </dependencies>
-    <releaseNotes>[Release notes](https://github.com/streamlink/streamlink-twitch-gui/releases/tag/v1.10.0)
-[Changelog](https://github.com/streamlink/streamlink-twitch-gui/compare/v1.9.1...v1.10.0)</releaseNotes>
+    <releaseNotes>[Release notes](https://github.com/streamlink/streamlink-twitch-gui/releases/tag/v1.11.0)
+[Changelog](https://github.com/streamlink/streamlink-twitch-gui/compare/v1.10.0...v1.11.0)</releaseNotes>
   </metadata>
 </package>
