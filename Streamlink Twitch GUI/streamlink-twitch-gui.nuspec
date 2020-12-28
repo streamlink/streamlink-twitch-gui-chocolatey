@@ -3,7 +3,7 @@
   <metadata>
     <id>streamlink-twitch-gui</id>
     <title>Streamlink Twitch GUI</title>
-    <version>1.10.0</version>
+    <version>1.11.0</version>
     <authors>Sebastian Meyer</authors>
     <owners>Sebastian Meyer, Scott Walters</owners>
     <summary>A multi platform Twitch.tv browser for Streamlink</summary>

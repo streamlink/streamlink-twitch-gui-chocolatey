@@ -7,10 +7,10 @@ $downloadPath = "https://github.com/streamlink/streamlink-twitch-gui/releases/do
 Install-ChocolateyZipPackage `
 	-PackageName    $packageName `
 	-Url            "$($downloadPath)streamlink-twitch-gui-$packageVersion-win32.zip" `
-	-Checksum       "ca1d62d7544de1042e7568ff8f140da3d389830b6bc2aa9b604ba7c6e2f8f106" `
+	-Checksum       "FBBE1DF4C7880387088BD6ED783F6F85DE4EC566EADA0E93222416E799CB75E4" `
 	-ChecksumType   "sha256" `
 	-Url64bit       "$($downloadPath)streamlink-twitch-gui-$packageVersion-win64.zip" `
-	-Checksum64     "26d56d71f7547ff0748fd6f13d2ed5f7e8c7a9cacf590f9a2ee81c0f184ca584" `
+	-Checksum64     "D60E6355BDF6B916AD8BFDC0607D79005CC860DA530A3F7129A05D3F7538F294" `
 	-ChecksumType64 "sha256" `
 	-UnzipLocation  $installDir
 
