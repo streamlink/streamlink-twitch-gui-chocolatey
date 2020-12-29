@@ -4,6 +4,9 @@ $toolsDir = Split-Path -parent $MyInvocation.MyCommand.Definition
 $installDir = Split-Path -parent $toolsDir
 $downloadPath = "https://github.com/streamlink/streamlink-twitch-gui/releases/download/$packageVersion/"
 
+New-Item -ItemType file $installDir\$packageName\notification_helper.exe.ignore -EA 0
+New-Item -ItemType file $installDir\$packageName\bin\win64\snoretoast.exe.ignore -EA 0
+
 Install-ChocolateyZipPackage `
 	-PackageName    $packageName `
 	-Url            "$($downloadPath)streamlink-twitch-gui-$packageVersion-win32.zip" `
@@ -13,9 +16,6 @@ Install-ChocolateyZipPackage `
 	-Checksum64     "D60E6355BDF6B916AD8BFDC0607D79005CC860DA530A3F7129A05D3F7538F294" `
 	-ChecksumType64 "sha256" `
 	-UnzipLocation  $installDir
-
-New-Item -ItemType file $installDir\$packageName\notification_helper.exe.ignore -EA 0
-New-Item -ItemType file $installDir\$packageName\bin\win64\snoretoast.exe.ignore -EA 0
 
 $desktop = [Environment]::GetFolderPath("Desktop")
 $shortcutFile = Join-Path $desktop "$packageName.lnk"
