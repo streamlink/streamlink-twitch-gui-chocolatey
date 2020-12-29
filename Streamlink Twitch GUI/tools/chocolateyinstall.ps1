@@ -4,8 +4,10 @@ $toolsDir = Split-Path -parent $MyInvocation.MyCommand.Definition
 $installDir = Split-Path -parent $toolsDir
 $downloadPath = "https://github.com/streamlink/streamlink-twitch-gui/releases/download/$packageVersion/"
 
-New-Item -ItemType file $installDir\$packageName\notification_helper.exe.ignore -EA 0
-New-Item -ItemType file $installDir\$packageName\bin\win64\snoretoast.exe.ignore -EA 0
+New-Item -ItemType file $installDir\$packageName\notification_helper.exe.ignore -EA 0 | Out-Null
+New-Item -ItemType directory $installDir\$packageName\bin\ -EA 0 | Out-Null
+New-Item -ItemType directory $installDir\$packageName\bin\win64\ -EA 0 | Out-Null
+New-Item -ItemType file $installDir\$packageName\bin\win64\snoretoast.exe.ignore -EA 0 | Out-Null
 
 Install-ChocolateyZipPackage `
 	-PackageName    $packageName `
