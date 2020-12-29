@@ -14,6 +14,9 @@ Install-ChocolateyZipPackage `
 	-ChecksumType64 "sha256" `
 	-UnzipLocation  $installDir
 
+New-Item -ItemType file $installDir\$packageName\notification_helper.exe.ignore -EA 0
+New-Item -ItemType file $installDir\$packageName\bin\win64\snoretoast.exe.ignore -EA 0
+
 $desktop = [Environment]::GetFolderPath("Desktop")
 $shortcutFile = Join-Path $desktop "$packageName.lnk"
 $exeFile = Join-Path (Join-Path $installDir $packageName) "$packageName.exe"
