@@ -8,6 +8,8 @@ New-Item -ItemType file $installDir\$packageName\notification_helper.exe.ignore 
 New-Item -ItemType directory $installDir\$packageName\bin\ -EA 0 | Out-Null
 New-Item -ItemType directory $installDir\$packageName\bin\win64\ -EA 0 | Out-Null
 New-Item -ItemType file $installDir\$packageName\bin\win64\snoretoast.exe.ignore -EA 0 | Out-Null
+New-Item -ItemType directory $installDir\$packageName\bin\win32\ -EA 0 | Out-Null
+New-Item -ItemType file $installDir\$packageName\bin\win32\snoretoast.exe.ignore -EA 0 | Out-Null
 
 Install-ChocolateyZipPackage `
 	-PackageName    $packageName `
