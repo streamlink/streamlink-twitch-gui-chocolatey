@@ -1,5 +1,5 @@
 $packageName = 'streamlink-twitch-gui'
-$packageVersion = 'v1.12.0'
+$packageVersion = 'v1.13.0'
 $toolsDir = Split-Path -parent $MyInvocation.MyCommand.Definition
 $installDir = Split-Path -parent $toolsDir
 $downloadPath = "https://github.com/streamlink/streamlink-twitch-gui/releases/download/$packageVersion/"
@@ -15,10 +15,10 @@ New-Item -ItemType file $installDir\$packageName\bin\win32\snoretoast.exe.ignore
 Install-ChocolateyZipPackage `
 	-PackageName    $packageName `
 	-Url            "$($downloadPath)streamlink-twitch-gui-$packageVersion-win32.zip" `
-	-Checksum       "1f8edbb60178e6910c98a7922cd058b5bb7c29e90b6c9b2dcfd2c7f76c61e476" `
+	-Checksum       "624de7d3ed40863b7a24b6ab4ddf8701a94358c90a8aa9785d43a1e86e85c7a4" `
 	-ChecksumType   "sha256" `
 	-Url64bit       "$($downloadPath)streamlink-twitch-gui-$packageVersion-win64.zip" `
-	-Checksum64     "525cdbb61e113857c0d712f8e7179b44db41f1471a11870d3afa30078ab389b2" `
+	-Checksum64     "ba0e2e6f27ab9e406d160942134d8b482e7659940e39af35ca171ff1e31c6357" `
 	-ChecksumType64 "sha256" `
 	-UnzipLocation  $installDir
 
