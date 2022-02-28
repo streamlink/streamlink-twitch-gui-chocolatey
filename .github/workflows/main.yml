@@ -5,6 +5,10 @@ on:
   # schedule:
     # - cron: '5 4 * * *'
 
+permissions:
+  # Required for add-and-commit
+  contents: write
+
 jobs:
   github-check:
     runs-on: ubuntu-latest
@@ -69,9 +73,10 @@ jobs:
       - name: Pack
         shell: pwsh
         run: cd './Streamlink Twitch GUI/'; choco pack
-      - name: Push
-        shell: pwsh
-        run: cd './Streamlink Twitch GUI/'; choco push --api-key ${{ secrets.CHOCOLATEY_API_KEY }}
+      # Disabling until package is stable
+      # - name: Push
+      #   shell: pwsh
+      #   run: cd './Streamlink Twitch GUI/'; choco push --api-key ${{ secrets.CHOCOLATEY_API_KEY }}
       - name: Commit changes back to the repository
         uses: EndBug/add-and-commit@v8
         with:
