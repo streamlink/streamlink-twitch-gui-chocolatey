@@ -15,7 +15,7 @@ New-Item -ItemType file $installDir\$packageName\bin\win32\snoretoast.exe.ignore
 Install-ChocolateyZipPackage `
 	-PackageName    $packageName `
 	-Url            "$($downloadPath)streamlink-twitch-gui-$packageVersion-win32.zip" `
-	-Checksum       "624de7d3ed40863b7a24b6ab4ddf8701a94358c90a8aa9785d43a1e86e85c7a4" `
+	-Checksum "ddf865ec7c9885272fb52fb560a16d84328a9594e60211c1dcde1571349541a0" `
 	-ChecksumType   "sha256" `
 	-Url64bit       "$($downloadPath)streamlink-twitch-gui-$packageVersion-win64.zip" `
 	-Checksum64     "ba0e2e6f27ab9e406d160942134d8b482e7659940e39af35ca171ff1e31c6357" `
@@ -26,3 +26,4 @@ $desktop = [Environment]::GetFolderPath("Desktop")
 $shortcutFile = Join-Path $desktop "$packageName.lnk"
 $exeFile = Join-Path (Join-Path $installDir $packageName) "$packageName.exe"
 Install-ChocolateyShortcut -shortcutFilePath $shortcutFile -targetPath $exeFile
+
