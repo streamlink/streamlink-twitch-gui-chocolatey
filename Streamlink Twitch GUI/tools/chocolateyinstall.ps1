@@ -18,7 +18,7 @@ Install-ChocolateyZipPackage `
 	-Checksum "ddf865ec7c9885272fb52fb560a16d84328a9594e60211c1dcde1571349541a0" `
 	-ChecksumType   "sha256" `
 	-Url64bit       "$($downloadPath)streamlink-twitch-gui-$packageVersion-win64.zip" `
-	-Checksum64     "ba0e2e6f27ab9e406d160942134d8b482e7659940e39af35ca171ff1e31c6357" `
+	-Checksum64     "75B9CDABEF572CDB3EA61F467443CD9F6C5C463AC87ECF1D0E4DE0123F1D6E5E" `
 	-ChecksumType64 "sha256" `
 	-UnzipLocation  $installDir
 
