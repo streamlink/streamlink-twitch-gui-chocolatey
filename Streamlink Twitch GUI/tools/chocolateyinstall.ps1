@@ -1,5 +1,5 @@
 $packageName = 'streamlink-twitch-gui'
-$packageVersion = 'v1.13.0'
+$packageVersion = 'v2.0.0'
 $toolsDir = Split-Path -parent $MyInvocation.MyCommand.Definition
 $installDir = Split-Path -parent $toolsDir
 $downloadPath = "https://github.com/streamlink/streamlink-twitch-gui/releases/download/$packageVersion/"
@@ -26,4 +26,3 @@ $desktop = [Environment]::GetFolderPath("Desktop")
 $shortcutFile = Join-Path $desktop "$packageName.lnk"
 $exeFile = Join-Path (Join-Path $installDir $packageName) "$packageName.exe"
 Install-ChocolateyShortcut -shortcutFilePath $shortcutFile -targetPath $exeFile
-
