@@ -1,5 +1,5 @@
 $packageName = 'streamlink-twitch-gui'
-$packageVersion = 'v1.13.0'
+$packageVersion = 'v2.0.0'
 $toolsDir = Split-Path -parent $MyInvocation.MyCommand.Definition
 $installDir = Split-Path -parent $toolsDir
 $downloadPath = "https://github.com/streamlink/streamlink-twitch-gui/releases/download/$packageVersion/"
