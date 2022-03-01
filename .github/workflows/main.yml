@@ -68,7 +68,7 @@ jobs:
       - name: Update install script
         shell: pwsh
         run: |
-          (Get-Content -path './Streamlink Twitch GUI/tools/chocolateyinstall.ps1' -Raw) -replace '-Checksum\s*"\S*"', '-Checksum "${{ needs.github-check.outputs.win32zipSha }}"' -replace '--Checksum64\s*"\S*"', '--Checksum64 "${{ needs.github-check.outputs.win64zipSha }}"' | Set-Content -Path './Streamlink Twitch GUI/tools/chocolateyinstall.ps1'
+          (Get-Content -path './Streamlink Twitch GUI/tools/chocolateyinstall.ps1' -Raw) -replace '-Checksum\s*"\S*"', '-Checksum "${{ needs.github-check.outputs.win32zipSha }}"' -replace '-Checksum64\s*"\S*"', '-Checksum64 "${{ needs.github-check.outputs.win64zipSha }}"' -replace "$packageVersion = 'v\S*'", "$packageVersion = 'v${{ needs.github-check.outputs.newVersionNumber }}'" | Set-Content -Path './Streamlink Twitch GUI/tools/chocolateyinstall.ps1'
       - name: Pack
         shell: pwsh
         run: cd './Streamlink Twitch GUI/'; choco pack
