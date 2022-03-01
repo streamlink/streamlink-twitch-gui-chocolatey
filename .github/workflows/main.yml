@@ -64,7 +64,7 @@ jobs:
       - name: Update nuspec
         shell: pwsh
         run: |
-          ((Get-Content -path './Streamlink Twitch GUI/streamlink-twitch-gui.nuspec' -Raw) -replace '${{ needs.github-check.outputs.oldVersionNumber }}','${{ needs.github-check.outputs.newVersionNumber }}') | Set-Content -Path './Streamlink Twitch GUI/streamlink-twitch-gui.nuspec'
+          ((Get-Content -path './Streamlink Twitch GUI/streamlink-twitch-gui.nuspec' -Raw) -replace '([^\[])${{ needs.github-check.outputs.oldVersionNumber }}','${1}${{ needs.github-check.outputs.newVersionNumber }}') | Set-Content -Path './Streamlink Twitch GUI/streamlink-twitch-gui.nuspec'
       - name: Update install script
         shell: pwsh
         run: |
