@@ -24,5 +24,12 @@ $packageArgs = @{
 	validExitCodes = @(0)
 }
 
-
 Install-ChocolateyPackage @packageArgs
+
+# TODO: Remove the old zip package
+# For now, lets just remove the desktop icon
+$desktop = [Environment]::GetFolderPath("Desktop")
+$shortcutFile = Join-Path $desktop "$packageName.lnk"
+if (Test-Path $shortcutFile){
+    Remove-Item $shortcutFile
+}
