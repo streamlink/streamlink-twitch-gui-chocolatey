@@ -1,28 +1,28 @@
 $packageName = 'streamlink-twitch-gui'
-$packageVersion = 'v2.0.0'
 $toolsDir = Split-Path -parent $MyInvocation.MyCommand.Definition
-$installDir = Split-Path -parent $toolsDir
-$downloadPath = "https://github.com/streamlink/streamlink-twitch-gui/releases/download/$packageVersion/"
 
-New-Item -ItemType directory $installDir\$packageName\ -EA 0 | Out-Null
-New-Item -ItemType file $installDir\$packageName\notification_helper.exe.ignore -EA 0 | Out-Null
-New-Item -ItemType directory $installDir\$packageName\bin\ -EA 0 | Out-Null
-New-Item -ItemType directory $installDir\$packageName\bin\win64\ -EA 0 | Out-Null
-New-Item -ItemType file $installDir\$packageName\bin\win64\snoretoast.exe.ignore -EA 0 | Out-Null
-New-Item -ItemType directory $installDir\$packageName\bin\win32\ -EA 0 | Out-Null
-New-Item -ItemType file $installDir\$packageName\bin\win32\snoretoast.exe.ignore -EA 0 | Out-Null
+$url = "https://github.com/streamlink/streamlink-twitch-gui/releases/download/v2.1.0/streamlink-twitch-gui-v2.1.0-win32-installer.exe"
+$hash = "20c129926d7a454c22a476c7fd2c1630ef2f2b57f9a26442b3dc33aeb2a42c70"
+$url64 = "https://github.com/streamlink/streamlink-twitch-gui/releases/download/v2.1.0/streamlink-twitch-gui-v2.1.0-win64-installer.exe"
+$hash64 = "46af3043cc802db5269fbe327023d545916bd51ca296479147c38f8674809f15"
 
-Install-ChocolateyZipPackage `
-	-PackageName    $packageName `
-	-Url            "$($downloadPath)streamlink-twitch-gui-$packageVersion-win32.zip" `
-	-Checksum "ddf865ec7c9885272fb52fb560a16d84328a9594e60211c1dcde1571349541a0" `
-	-ChecksumType   "sha256" `
-	-Url64bit       "$($downloadPath)streamlink-twitch-gui-$packageVersion-win64.zip" `
-	-Checksum64     "75B9CDABEF572CDB3EA61F467443CD9F6C5C463AC87ECF1D0E4DE0123F1D6E5E" `
-	-ChecksumType64 "sha256" `
-	-UnzipLocation  $installDir
+$packageArgs = @{
+	packageName    = $packageName
+	unzipLocation  = $toolsDir
+	fileType       = 'exe'
+	url            = $url
+	checksum       = $hash
+	checksumType   = 'sha256'
+	url64bit       = $url64
+	checksum64     = $hash64
+	checksumType64 = 'sha256'
 
-$desktop = [Environment]::GetFolderPath("Desktop")
-$shortcutFile = Join-Path $desktop "$packageName.lnk"
-$exeFile = Join-Path (Join-Path $installDir $packageName) "$packageName.exe"
-Install-ChocolateyShortcut -shortcutFilePath $shortcutFile -targetPath $exeFile
+	softwareName   = 'Streamlink Twitch GUI*'
+
+
+	silentArgs     = '/S'
+	validExitCodes = @(0)
+}
+
+
+Install-ChocolateyPackage @packageArgs
