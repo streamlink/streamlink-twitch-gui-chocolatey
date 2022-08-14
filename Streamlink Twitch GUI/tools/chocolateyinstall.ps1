@@ -33,3 +33,6 @@ $shortcutFile = Join-Path $desktop "$packageName.lnk"
 if (Test-Path $shortcutFile){
     Remove-Item $shortcutFile
 }
+# and also remove the bin reference
+Uninstall-BinFile `
+	-Name $packageName
