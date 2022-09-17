@@ -1,10 +1,10 @@
 $packageName = 'streamlink-twitch-gui'
 $toolsDir = Split-Path -parent $MyInvocation.MyCommand.Definition
 
-$url = "https://github.com/streamlink/streamlink-twitch-gui/releases/download/v2.1.0/streamlink-twitch-gui-v2.1.0-win32-installer.exe"
-$hash = "20c129926d7a454c22a476c7fd2c1630ef2f2b57f9a26442b3dc33aeb2a42c70"
-$url64 = "https://github.com/streamlink/streamlink-twitch-gui/releases/download/v2.1.0/streamlink-twitch-gui-v2.1.0-win64-installer.exe"
-$hash64 = "46af3043cc802db5269fbe327023d545916bd51ca296479147c38f8674809f15"
+$url = "https://github.com/streamlink/streamlink-twitch-gui/releases/download/v2.2.0/streamlink-twitch-gui-v2.2.0-win32-installer.exe"
+$hash = "b5bc5e1ecc20cd097179edd2c9f7879b471e5666710e61e16b8083fa87117677"
+$url64 = "https://github.com/streamlink/streamlink-twitch-gui/releases/download/v2.2.0/streamlink-twitch-gui-v2.2.0-win64-installer.exe"
+$hash64 = "23e8cd61160700918f0ab656f72148388a5b6e4c2753a227bce92518badab1ce"
 
 $packageArgs = @{
 	packageName    = $packageName
