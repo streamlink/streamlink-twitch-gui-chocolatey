@@ -21,13 +21,18 @@ const installPwshPath = path.join(
 
 async function main(): Promise<void> {
   program.option("--upload", "Upload the new chocolatey package");
+  program.option("--force", "Force update the package");
   program.parse(process.argv);
   const options = program.opts();
 
   const current = getCurrentVersion();
   const latest = await getLatestVersion();
-  if (current !== latest.version) {
-    console.log(`New version available!`);
+  if (current !== latest.version || options.force) {
+    if (current !== latest.version) {
+      console.log(`New version available!`);
+    } else {
+      console.log(`Forcing update!`);
+    }
 
     const win32Hash = await getSha256(
       latest.win32Installer.browser_download_url
@@ -54,18 +59,30 @@ async function main(): Promise<void> {
 
 async function createNupkgAndUpload(shouldUpload: boolean) {
   console.log("Creating nupkg...");
-  execSync("choco pack", {
-    cwd: packageFolder,
-  });
+  try {
+    execSync("choco pack", {
+      cwd: packageFolder,
+      stdio: "inherit",
+    });
+  } catch (error: unknown) {
+    console.error("Error while creating nupkg:", (error as Error).message);
+  }
+
   if (shouldUpload) {
     console.log("Uploading nupkg...");
     assert(process.env.CHOCOLATEY_API_KEY, "Need an API key to upload");
-    execSync(
-      `choco push  --source=https://push.chocolatey.org/ --api-key ${process.env.CHOCOLATEY_API_KEY}`,
-      {
-        cwd: packageFolder,
-      }
-    );
+
+    try {
+      execSync(
+        `choco push  --source=https://push.chocolatey.org/ --api-key ${process.env.CHOCOLATEY_API_KEY}`,
+        {
+          cwd: packageFolder,
+          stdio: "inherit",
+        }
+      );
+    } catch (error: unknown) {
+      console.error("Error while uploading nupkg:", (error as Error).message);
+    }
   }
 }
 
